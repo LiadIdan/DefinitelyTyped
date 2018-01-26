@@ -475,11 +475,15 @@ declare namespace Materialize {
 }
 
 /**
- * Declare Pickadate namespace again in order to add more Materialize specific properties to TimeOptions interface
+ * Declare Pickadate namespace again in order to add more Materialize specific properties to TimeOptions and DateOptions interfaces
  *
  * @see http://www.typescriptlang.org/docs/handbook/declaration-merging.html
  */
 declare namespace Pickadate {
+	interface DateOptions {
+		weekdaysLetter?: string[];
+	}
+	
 	interface TimeOptions {
 		/**
 		 * Set default time such as : 'now', '1:30AM', '16:30'.
